@@ -1,32 +1,36 @@
 import React from "react";
 import "./App.css";
-// import { NewComponent } from "./NewComponent";
-import { Body } from "./site/Body";
-import { Footer } from "./site/Footer";
-import { Header } from "./site/Header";
 
 function App() {
-  // const students = [
-  //   { id: 1, name: "James", age: 8 },
-  //   { id: 2, name: "Robert", age: 18 },
-  //   { id: 3, name: "John", age: 28 },
-  //   { id: 4, name: "Michael", age: 38 },
-  //   { id: 5, name: "William", age: 48 },
-  //   { id: 6, name: "David", age: 58 },
-  //   { id: 7, name: "Richard", age: 68 },
-  //   { id: 8, name: "Joseph", age: 78 },
-  //   { id: 9, name: "Thomas", age: 88 },
-  //   { id: 10, name: "Charles", age: 98 },
-  //   { id: 11, name: "Christopher", age: 100 },
-  // ];
-  return (
-    <>
-      {/* <Header title={"New Header"} />
-      <Body titleForBody={"New Body"} />
-      <Footer title={"New Footer"} /> */}
+  const myFirstSubscriber = () => {
+    console.log("Hello I am Vasya!");
+  };
+  const mySecondSubscriber = () => {
+    console.log("Hello I am Dima!");
+  };
+  const onClickHandler = (name: string) => {
+    console.log(name);
+  };
+  // const foo1 = () => {
+  //   console.log("100200");
+  // };
+  // const foo2 = (info: number) => {
+  //   console.log(info);
+  // };
 
-      {/* <NewComponent students={students} /> */}
-    </>
+  return (
+    <div className="App">
+      {/* <button onClick={myFirstSubscriber}>MyFirstYouTubeChanel-1</button>
+      <button onClick={mySecondSubscriber}>MySecondYouTubeChanel-2</button> */}
+
+      <button onClick={() => onClickHandler("Vasya")}>MyYouTubeChanel-1</button>
+      <button onClick={() => onClickHandler("Dima")}>MyYouTubeChanel-2</button>
+
+      {/* if not sending anything inside {} just function name
+      <button onClick={foo1}>1</button>
+      {/* if sending something inside {} then it needs to be anonymous function  and then in function above inside () also type*/}
+      {/* <button onClick={() => foo2(100200)}>2</button> */}
+    </div>
   );
 }
 
